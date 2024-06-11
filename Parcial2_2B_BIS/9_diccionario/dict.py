@@ -22,10 +22,13 @@ print(alumnos)
 
 print(alumnos["nombre"])
 
-#Agregar elementos
+#Agregar elementos al diccionario
 
 alumnos["telefono"]=6181234567
 print(alumnos)
+alumnos["celular"]=6181234567
+print(alumnos)
+
 
 
 #Actualizar elementos

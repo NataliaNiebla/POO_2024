@@ -1,5 +1,6 @@
 paises=["Mexico", "USA", "Brasil", "Japon"]
 numeros=[1,2,3,4,5,6,7,8,1]
+numeros2=[1,2,3,4,5,6,7,8,1]
 texto=["Hola", True, 1,2,10]
 """
 #Ordenar una lista
@@ -35,18 +36,20 @@ print(numeros)
 print(numeros)
 numeros.reverse()
 print(numeros)
+"""
 
 #Buscar un dato dentro de una lista
 busqueda=("Brasil" in paises)
 print(busqueda)
-"""
-#Cuantas veces hay un valor en una lista
-print(numeros)
+
+#Cuantas veces se encuentra un valor en una lista
+print(numeros2)
 numeros.append(1)
-cuantos=numeros.count(1)
+cuantos=numeros2.count(1)
 print(cuantos)
 
-#Unir listas
+
+#Realizar una union entre dos listas
 print(paises)
 paises.extend(numeros)
 print(paises)

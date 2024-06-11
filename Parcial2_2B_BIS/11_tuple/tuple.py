@@ -16,6 +16,9 @@ todos con diferentes calidades y usos.
 tupla1 = ("apple", "banana", "cherry","apple")
 print(tupla1)
 
+tupla12 = ("apple2", "banana2", "cherry2","apple2")
+print(tupla12)
+
 
 tupla2 = ("abc", 34, True, 40, "male")
 print(tupla2)

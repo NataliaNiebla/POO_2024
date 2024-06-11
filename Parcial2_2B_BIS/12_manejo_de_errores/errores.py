@@ -28,6 +28,7 @@ except:
     
 """
     
+
 #Ejemplo 3. Cuando se generan multiples excepciones
 try:
     numero=int(input("Ingresa un numero, por favor: "))
@@ -40,3 +41,6 @@ else:
     print("Se ejecuto sin errores")
 finally:
     print("Accion finalizada")
+    
+#Fin u2
+print("Natalia Niebla Rosales")
