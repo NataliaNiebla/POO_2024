@@ -43,3 +43,5 @@ resultado_area = calcular_area_rectangulo(base, altura)
 resultado_perimetro = calcular_perimetro_rectangulo(base, altura)
 
 print(resultado_area)
+
+print("Natalia Niebla Rosales")
