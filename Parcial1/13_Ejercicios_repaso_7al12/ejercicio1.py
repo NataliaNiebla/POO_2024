@@ -34,24 +34,28 @@ def long_lista(lista):
 
 
 def buscar_el(lista):
-    no_encontre=True
-
-    for i in lista:
-        if buscar==i:
-            print(buscar)
-            print(f"El elemento {i} fue localizado en la posición {lista.index(i)}")
-            no_encontre=False
-            
-    if no_encontre:
-        print(f"No encontré el elemento")
+    num_buscar=int(input("Escribe el numero a buscar"))
+    for i in numeros:
+        if num_buscar==i:
+            print(f"El numero a buscar es: {num_buscar} y si se encontro")
         
 
+print("MENU")
+opcion=input("1.- Recorrer la lista y mostrarla \n 2.- Recorra la lista de numeros y devuelva un string \n 3.- Ordenarla y mostrarla \n 4.- Mostrar su longitud \n 5.-Buscar algun numero dentro de la lista \n ¿Que opción desea?  ")
 
-lista_input=input("Ingresa una lista de números separados por comas: ")
-lista= crear_lista(lista_input)
-resultado= str_visualizacion(lista)
-sorted_list=ordenar_lista(lista)
-longitud=long_lista(lista)
-buscar=input("Busca el elemento: ")
-buscar_el(buscar)
+if opcion=="1":
+  lista_input=input("Ingresa una lista de números separados por comas: ")
+  lista= crear_lista(lista_input)
+elif opcion=="2":
+  resultado= str_visualizacion(lista)
+elif opcion=="3":
+  sorted_list=ordenar_lista(lista)
+elif opcion=="4":
+  longitud=long_lista(lista)
+elif opcion=="5":
+  buscar=input("Busca el elemento: ")
+  buscar_el(buscar)
+else:
+  print("Opción invalida ... verifique")
+
 

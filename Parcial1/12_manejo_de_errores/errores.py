@@ -41,6 +41,3 @@ else:
     print("Se ejecuto sin errores")
 finally:
     print("Accion finalizada")
-    
-#Fin u2
-print("Natalia Niebla Rosales")
