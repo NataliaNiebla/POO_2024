@@ -1,18 +1,14 @@
 """OBJETVO: crear una tabla"""
+from conexiónBD import*
 
-import mysql.connector
-conexion=mysql.connector.connect(
-    host='localhost',
-    user='root',         #random
-    password='',         #no hay contraseña aún
-    database='bd_python'  
-)
+try:
+    micursor=conexion.cursor()
 
-micursor=conexion.cursor()
+    sql='create table clientes2 (id int primary key auto_increment, nombre varchar(60), direccion varchar(120), tel varchar(10))'
 
-sql='create table clientes (id int primary key auto_increment, nombre varchar(60), direccion varchar(120), tel varchar(10))'
-
-micursor.execute(sql)
-
-if micursor:
+    micursor.execute(sql)
+    
+except:
+    print("Ocurrio un problema, por favor verifica")
+else:
     print("Se creo la tabla exitosamente")

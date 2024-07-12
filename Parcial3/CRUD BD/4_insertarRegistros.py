@@ -2,12 +2,25 @@
 from conexiónBD import*
 #No puedes manipular lo que hay dentro del archivo
 
-micursor=conexion.cursor()
+try:
+    micursor=conexion.cursor()
+    nombre=input("Favor de ingresar tu nombre: ")
+    direccion=input("Favor de ingresar tu dirección: ")
+    tel=input("Favor de ingresar tu número por favor: ")
+    
+    #sql= "INSERT INTO `clientes2` (`id`, `nombre`, `direccion`, `tel`) VALUES (NULL, 'Natalia Niebla2', 'Sierra de topia 122 fracc.Los Fresnos2', '6183015090')"
+    sql= "INSERT INTO `clientes` (`id`, `nombre`, `direccion`, `tel`) VALUES (NULL, %s, %s, %s)"
+    valores=(nombre, direccion, tel)
+    #micursor.execute(sql)
+    micursor.execute(sql, valores)
 
-sql= "INSERT INTO `clientes` (`id`, `nombre`, `direccion`, `tel`) VALUES (NULL, 'Natalia Niebla', 'Sierra de topia 122 fracc.Los Fresnos', '6183015090')"
+    #Sirve para finalizar la ejecución del SQL de manera exitosa
+    micursor=conexion.commit()
+    
+except:
+    print("No se pudo insertar el registro correctamente")
+else:
+    print("Registro insertado exitosamente")
 
-micursor.execute(sql)
-
-#Sirve para finalizar la ejecución del SQL de manera exitosa
-micursor=conexion.commit()
-print("Registro insertado exitosamente")
+    """ para devolver el autoincremento a 1"""
+    #ALTER TABLE nombre_tabla AUTO_INCREMENT = 1 
