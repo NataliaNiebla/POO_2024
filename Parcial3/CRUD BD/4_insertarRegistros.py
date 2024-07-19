@@ -1,6 +1,7 @@
 #import conexiónBD   #Puedes manipular lo que hay dentro del archivo, SOLO LO QUE NECESITAS
 from conexiónBD import*
 #No puedes manipular lo que hay dentro del archivo
+"""OBJETIVO: Realizar un registro dentro de alguna tabla"""
 
 try:
     micursor=conexion.cursor()
@@ -8,7 +9,6 @@ try:
     direccion=input("Favor de ingresar tu dirección: ")
     tel=input("Favor de ingresar tu número por favor: ")
     
-    #sql= "INSERT INTO `clientes2` (`id`, `nombre`, `direccion`, `tel`) VALUES (NULL, 'Natalia Niebla2', 'Sierra de topia 122 fracc.Los Fresnos2', '6183015090')"
     sql= "INSERT INTO `clientes` (`id`, `nombre`, `direccion`, `tel`) VALUES (NULL, %s, %s, %s)"
     valores=(nombre, direccion, tel)
     #micursor.execute(sql)

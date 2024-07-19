@@ -1,9 +1,10 @@
+"""OBJETIVO: obtener y mostrar datos específicos de la base de datos."""
 from conexiónBD import*
 
 try:
     micursor=conexion.cursor()
 
-    sql="select * from clientes2 where id=1"
+    sql="select * from clientes where id=1"
     micursor.execute(sql)
 
     #Crear un objeto para enviar el resultado de la ejecucuón del execute para posteriormente mostrar con un ciclo

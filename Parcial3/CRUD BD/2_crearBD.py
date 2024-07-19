@@ -15,7 +15,7 @@ else:
     #Crear un objeto de tipo cursor que permita ejecutar instrucciones sQL
     micursor=conexion.cursor()
 
-    sql="create database bd_python"
+    sql="create database bd_python2"
     micursor.execute(sql)  #ejecución de contenido/ consulta
 
     if micursor:
